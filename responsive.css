@@ -1,99 +1,120 @@
-@media only screen and (max-width: 1160px) {
-    .experienceTopSection .boxes {
-      width: 50%;
+@media only screen and (max-width: 1024px) {
+    nav div ul li {
+      display: none;
+    }
+    .menu {
+      display: block !important;
+      font-size: 24px;
+    }
+    .imageWithTextSection .rightBox h2 {
+      font-size: 36px;
+    }
+    .imageWithTextSection .rightBox .emailBox {
+      width: 100%;
+    }
+    .countersection h2.heading {
+      width: 100%;
+    }
+    .personBox .leftBox h2 {
+      font-size: 28px;
+    }
+    .personBox .leftBox p,
+    .teamBox .contentBox p {
+      font-size: 16px;
+    }
+    .ourTeamhead p {
+      text-align: justify;
     }
   }
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 950px) {
     .imageWithTextSection .leftBox,
     .imageWithTextSection .rightBox {
       width: 100%;
       text-align: center;
     }
-    .imageWithTextSection .rightBox {
-      padding: 20px 0;
-    }
     .imageWithTextSection .leftBox img {
-      width: 60%;
       margin: 0 auto;
+      aspect-ratio: 1/1;
+      padding: 0 0 20px 0;
     }
-    .nextProjectSection {
-      flex-wrap: wrap;
+    .footerBottom {
+      justify-content: center;
     }
-    .nextProjectSection .leftBox {
-      width: 100%;
-    }
-  }
-  @media only screen and (max-width: 950px) {
-    nav ul li {
-      display: none;
-    }
-    nav ul li.menuIcon {
-      display: block !important;
-    }
-    .projectHighlight {
-      width: 100% !important;
-    }
-    .projectBox .boxes {
-      width: 50%;
-    }
-    .nextProjectSection .leftBox h2 {
-      font-size: 44px;
+    .footerBottom ul {
+      width: 33.33%;
+      padding-bottom: 20px;
     }
   }
-  
   @media only screen and (max-width: 768px) {
-    .experienceTopSection .boxes .marginBoxes {
-      padding: 30px 20px;
-    }
-    .imageWithTextSection .rightBox h2 {
-      font-size: 44px;
-    }
-    .featureHeadSection h2 {
-      font-size: 24px;
-    }
-    .nextProjectSection .leftBox h2 {
+    .countersection h2.heading {
       font-size: 32px;
     }
-    .featureHeadSection {
-      flex-wrap: wrap;
+    .counterBox .box h2 {
+      font-size: 32px;
     }
-    .featureHeadSection div {
+    .counterBox .box {
+      width: 50%;
+      margin-bottom: 16px;
+    }
+    .counterBox {
+      align-items: baseline;
+    }
+    .counterBox .box p {
+      font-size: 16px;
+    }
+    .personBox {
+      flex-direction: column-reverse;
+    }
+    .personBox .leftBox,
+    .personBox .rightBox {
       width: 100%;
     }
-    .featureHeadSection button {
-      margin: 10px 0;
+    .personBox .leftBox {
+      text-align: center;
+    }
+    .teamMainSection .teamBox {
+      width: 100%;
+    }
+    .teamBox .imageBox img {
+      aspect-ratio: 1/0.9;
+    }
+    .footerBottom {
+      justify-content: flex-start;
+    }
+  
+    .footerBottom ul {
+      width: 50%;
+      padding-bottom: 20px;
+    }
+    .teamBox .marginDiv .contentBox {
+      text-align: center;
     }
   }
   
-  @media only screen and (max-width: 620px) {
-    .experienceTopSection .boxes {
-      width: 100%;
-    }
-    .projectSection .projectBoxes {
-      width: 100%;
-    }
-    .projectBox .boxes {
-      width: 100%;
-    }
-    .experienceTopSection .boxes .marginBoxes {
-      margin-right: 0;
-    }
-  }
   @media only screen and (max-width: 575px) {
-    .nextProjectSection .leftBox h2 {
-      font-size: 24px;
-    }
-    .nextProjectSection .leftBox p {
-      padding-right: 0;
-    }
-    footer ul li {
-      padding: 0 10px;
-    }
     .imageWithTextSection .rightBox h2 {
-      font-size: 32px;
+      font-size: 26px;
+      padding-top: 10px;
     }
-    .projectBox .boxes .marginBox {
-      margin: 0 !important;
+    .countersection h2.heading {
+      font-size: 26px;
+    }
+    .footerHead {
+      justify-content: center;
+    }
+    .footerHead img {
+      padding: 10px 0;
+    }
+    .footerHead ul {
+      width: 100%;
+      justify-content: center;
+      padding: 10px 0;
+    }
+    .imageWithTextSection .rightBox .emailBox form button {
+      padding: 12px 16px;
+    }
+    .fa-envelope {
+      padding: 10px;
     }
   }
   

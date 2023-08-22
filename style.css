@@ -1,374 +1,304 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,800;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 * {
   margin: 0;
   padding: 0;
 }
 :root {
+  --nav-bg-color: #636c79;
   --text-white-color: #fff;
-  --text-red-color: #ef4040;
-  --box-black-color: #1e1e1e;
-  --gray-shade: rgb(152, 152, 152);
+  --green-btn-bg: #8bb7a2;
+  --light-black: #1b1d21;
+  --gray-shade: #585858;
+  --footer-bg-color: #10181d;
 }
 body {
-  background-color: #111111;
   font-family: "Poppins", sans-serif;
 }
 .wrapper {
   width: 100%;
 }
-.container,
-nav {
+.container {
   width: 80%;
   margin: 0 auto;
 }
-/* Navigation  */
-nav {
+.navBar {
+  padding: 16px 0;
+  background-color: var(--nav-bg-color);
+}
+nav div {
+  width: 90%;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 0 0 0;
 }
-.brand-image img {
+.brandLogo img {
   height: 40px;
-  display: block;
 }
-nav ul {
-  list-style-type: none;
+
+nav div ul {
   display: flex;
+  list-style-type: none;
+  align-items: center;
 }
-nav ul li {
-  padding: 0 24px;
+nav div ul li {
+  padding: 0 16px;
 }
-nav ul li.menuIcon {
-  color: var(--text-white-color);
+.menu {
   display: none;
-  font-size: 24px;
 }
-nav ul li a {
-  font-size: 16px;
-  font-weight: 500;
+nav div ul li a {
+  display: inline-flex;
   text-decoration: none;
   color: var(--text-white-color);
 }
-
-/* Main Body -> Image With text Section  */
-
+nav div ul li button {
+  width: 150px;
+  padding: 8px 24px;
+  margin-left: 50px;
+  font-size: 14px;
+  color: var(--text-white-color);
+  cursor: pointer;
+  background-color: var(--nav-bg-color);
+  border: 1px solid var(--text-white-color);
+}
 .imageWithTextSection {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
+  padding: 80px 0;
+  background-color: var(--nav-bg-color);
 }
-.imageWithTextSection .leftBox {
-  width: 50%;
-}
+.imageWithTextSection .leftBox,
 .imageWithTextSection .rightBox {
   width: 50%;
 }
+.imageWithTextSection .container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
 .imageWithTextSection .leftBox img {
-  padding-top: 50px;
-  width: 100%;
+  width: 75%;
+  aspect-ratio: 1/1.2;
+  object-fit: cover;
+  object-position: center;
   display: block;
-  object-fit: contain;
-}
-.rightBox .mainContent p {
-  color: var(--text-white-color);
-  line-height: 1.3;
-  font-weight: 300;
-  padding: 10px 0;
-}
-.rightBox .mainContent .hightLight {
-  color: var(--text-red-color) !important;
-  font-weight: 600;
-  font-size: 24px;
 }
 .imageWithTextSection .rightBox h2 {
-  color: var(--text-white-color);
   font-size: 64px;
-  line-height: 1.2;
-  font-weight: 600;
-}
-.mainContent button {
-  padding: 12px 24px;
-  font-size: 18px;
-  margin-top: 24px;
-  cursor: pointer;
-  border: none;
-  background-color: var(--text-red-color);
   color: var(--text-white-color);
+  font-weight: 700;
+  line-height: 1.3;
 }
 
-/* Main Body -> Experience Section */
-.experienceSection {
-  position: relative;
-}
-.experienceSection::before {
-  position: absolute;
-  content: "";
-  height: 100%;
-  width: 50%;
-  top: 0;
-  left: 0;
-  background-color: #181818;
-  z-index: -1;
-}
-.experienceSection .container {
-  display: flex;
-  flex-direction: column;
-}
-
-.experienceTopSection {
-  width: 100%;
-  padding: 100px 0;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  /* justify-content: center; */
-}
-.experienceTopSection .boxes {
-  width: 33.33%;
-  margin: 20px 0;
-}
-.experienceTopSection .boxes .marginBoxes {
-  background-color: var(--box-black-color);
-  margin-right: 20px;
-  padding: 50px;
-}
-.experienceTopSection .boxes .marginBoxes h2 {
-  font-size: 24px;
-  font-weight: 600;
-  color: var(--text-white-color);
-}
-.experienceTopSection .boxes .marginBoxes p {
+.imageWithTextSection .rightBox p {
   padding: 20px 0;
   color: var(--text-white-color);
+  opacity: 0.8;
+  font-weight: 300;
 }
-.experienceTopSection .boxes .marginBoxes a {
-  color: var(--text-red-color);
-  text-decoration: none;
+
+.imageWithTextSection .rightBox .emailBox {
+  background-color: var(--text-white-color);
+  padding: 8px 0;
+  width: 90%;
+  display: flex;
+  align-items: center;
 }
-.experienceBottomSection {
-  padding-bottom: 100px;
+.fa-envelope {
+  font-size: 18px;
+  padding: 16px;
 }
-.projectBox {
-  flex-wrap: wrap;
+.imageWithTextSection .rightBox .emailBox form {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.imageWithTextSection .rightBox .emailBox form input {
+  border: none;
+  background-color: var(--text-white-color);
+  outline: none;
+}
+.imageWithTextSection .rightBox .emailBox form button,
+.personBox .leftBox button {
+  margin-right: 10px;
+  padding: 12px 40px;
+  background-color: var(--green-btn-bg);
+  color: var(--text-white-color);
+  border: none;
+  font-weight: 500;
+  font-size: 16px;
+}
+.countersection {
+  padding: 80px 0;
+}
+.countersection h2.heading {
+  width: 60%;
+  font-size: 48px;
+  text-align: center;
+  margin: 0 auto;
+  color: var(--light-black);
+}
+.counterBox {
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
-}
-
-.projectBox .boxes {
-  width: 33.33%;
-}
-.projectBox .boxes .marginBox {
-  margin-right: 16px;
-}
-.experienceSpecial {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-}
-.projectBox .boxes .marginBox .topBox,
-.projectBox .boxes .marginBox .bottomBox {
-  margin: 16px 0;
-  padding: 20px;
-  text-align: center;
-  background-color: var(--box-black-color);
-}
-.experienceSpecial h2 {
-  font-size: 100px;
-  color: var(--text-red-color);
-  line-height: 1;
-}
-.experienceSpecial h4 {
-  color: var(--text-white-color);
-  font-size: 28px;
-  font-weight: 600;
-}
-.boxes .marginBox h2 {
-  color: var(--text-red-color);
-  font-size: 48px;
-}
-.boxes .marginBox h3 {
-  color: var(--text-white-color);
-  font-weight: 500;
-}
-.featureHeadSection {
+  flex-wrap: wrap;
   padding: 50px 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
-.featureHeadSection h2 {
-  color: var(--text-white-color);
-  font-size: 34px;
-  text-transform: uppercase;
+.counterBox .box {
+  width: 25%;
+  text-align: center;
 }
-.featureHeadSection p {
+.counterBox .box h2 {
+  font-size: 44px;
+}
+.counterBox .box p {
+  font-size: 18px;
   color: var(--gray-shade);
 }
-
-.featureHeadSection button {
-  padding: 12px 24px;
-  font-size: 16px;
-  margin-right: 20px;
-  cursor: pointer;
-  border: none;
-  background-color: var(--text-red-color);
-  color: var(--text-white-color);
-  text-transform: uppercase;
+.video {
+  width: 100%;
 }
-.projectSection {
+.video img {
+  width: 100%;
+  aspect-ratio: 1/0.5;
+  object-fit: cover;
+}
+.ourWorksection {
+  padding: 80px 0;
+}
+
+.ourWorksection h2.heading {
+  width: 60%;
+  font-size: 48px;
+  text-align: center;
+  margin: 0 auto;
+  color: var(--light-black);
+}
+.mainWorkMainBox {
+  padding-top: 50px;
+}
+.personBox {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.personBox .leftBox,
+.personBox .rightBox {
+  width: 50%;
+}
+.personBox .rightBox {
+  padding: 50px 0;
+}
+.personBox .rightBox img {
+  margin: 0 auto;
+  width: 80%;
+  display: block;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  object-position: center;
+}
+.oddPerson {
+  flex-direction: row-reverse;
+}
+.personBox .leftBox h2 {
+  font-size: 44px;
+  font-weight: 600;
+}
+.personBox .leftBox p,
+.teamBox .contentBox p {
+  padding: 20px 0;
+  color: var(--gray-shade);
+  font-weight: 400;
+  opacity: 1;
+  font-size: 18px;
+}
+
+.teamMainSection {
   width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
-.projectSection .projectBoxes {
-  width: 50%;
-  margin-bottom: 50px;
+.teamBox {
+  width: 33.33%;
 }
-.projectSection .projectBoxes:nth-child(odd) .projectMarginBox {
-  margin-right: 20px;
+.teamBox .marginDiv {
+  margin: 20px 20px 0 0;
+  padding: 20px 20px 0 0;
 }
-
-.projectSection .projectBoxes:nth-child(even) .projectMarginBox {
-  margin-left: 20px;
-}
-
-.projectMarginBox .imageBox {
-  aspect-ratio: 1/1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 50px;
-  background-color: var(--box-black-color);
-}
-.projectMarginBox .imageBox img {
+.teamBox .imageBox img {
   width: 100%;
   display: block;
+  aspect-ratio: 1/1.1;
+  object-fit: cover;
+  object-position: center;
 }
-
-.projectMarginBox .contentBox h2 {
-  color: var(--text-white-color);
-  padding: 20px 0 10px 0;
-  line-height: 1;
-}
-.projectMarginBox .contentBox span {
-  align-items: center;
-  display: flex;
-}
-.projectMarginBox .contentBox span a {
-  color: var(--text-red-color);
-  text-transform: uppercase;
-  text-decoration: none;
-}
-.projectMarginBox .contentBox span a .fas {
-  padding-left: 5px;
-  font-size: 14px;
-}
-.nextProjectSection {
-  width: 100%;
-  padding: 50px 0;
-  display: flex;
-  margin: 50px 0;
-  align-items: center;
-  /* flex-wrap: wrap; */
-  flex-direction: row;
-  background-color: var(--box-black-color);
-}
-.nextProjectSection .leftBox {
-  width: 70%;
-  padding: 0 50px;
-}
-.nextProjectSection .leftBox h2 {
-  font-size: 54px;
-  line-height: 1.4;
-  color: var(--text-white-color);
+.teamBox .contentBox h2 {
+  font-size: 24px;
+  color: var(--light-black);
   font-weight: 600;
+  padding: 10px 0;
 }
-.nextProjectSection .leftBox p {
-  color: var(--gray-shade);
-  padding: 20px 50px 20px 0;
-}
-.nextProjectSection .rightBox button {
-  padding: 12px 24px;
-  font-size: 16px;
-  margin-right: 20px;
-  cursor: pointer;
-  border: none;
-  background-color: var(--text-red-color);
-  color: var(--text-white-color);
-  text-transform: uppercase;
-}
-.nextProjectSection .rightBox {
-  width: 30%;
-  padding: 0 50px;
-}
-.bottomNavigation {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  list-style-type: none;
-  padding: 20px 0;
-}
-.bottomNavigation li {
-  padding: 0 20px;
-}
-.bottomNavigation li a {
-  text-decoration: none;
-  color: var(--text-white-color);
+.teamBox .contentBox p {
+  padding: 0;
 }
 footer {
-  padding: 36px 0;
-  background-color: var(--box-black-color);
+  padding: 30px 0;
+  background-color: var(--footer-bg-color);
 }
-footer .container {
+.footerHead {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-bottom: 30px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid var(--gray-shade);
 }
-footer ul {
-  list-style-type: none;
+.footerHead img {
+  height: 40px;
+}
+.footerHead ul {
   display: flex;
+  list-style-type: none;
 }
-footer ul li {
-  padding: 0 32px;
-}
-footer ul li a {
-  text-decoration: none;
-  color: var(--text-white-color);
+.footerHead ul li {
+  padding: 15px;
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+  margin-left: 10px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.1);
   cursor: pointer;
 }
-footer ul li a .fab {
+.footerHead ul li .fab {
   font-size: 24px;
-}
-
-.experienceTopSection .marginBoxes span {
-  align-items: center;
-  display: flex;
-}
-.experienceTopSection .marginBoxes span a {
-  color: var(--text-red-color);
-  text-transform: uppercase;
-  text-decoration: none;
-}
-.experienceTopSection .marginBoxes span a .fas {
-  padding-left: 5px;
-  font-size: 14px;
-}
-.projectIdon {
   color: var(--text-white-color);
-  font-size: 56px;
-  padding-bottom: 12px;
 }
-.experienceTopSection .specialProjectBox {
-  background-color: var(--text-red-color) !important;
+.footerBottom {
+  width: 100%;
+  display: flex;
+  padding: 50px 0;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
 }
-.experienceTopSection .specialProjectBox a {
-  color: var(--text-white-color) !important;
+.footerBottom ul {
+  list-style: none;
+  width: 20%;
 }
-.footer-logo img {
-  height: 40px;
+.footerBottom ul li h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-white-color);
+  opacity: 0.8;
+}
+.footerBottom ul li {
+  padding: 8px 0;
+  color: var(--gray-shade);
 }
