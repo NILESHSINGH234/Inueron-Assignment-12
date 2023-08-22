@@ -22,4 +22,4 @@ In this project i have created a Product landing page from scratch. And i have l
 
 ### You can Check it Live on Below Link :
 
-[Live Link !](https://product-landing-page-complete.netlify.app/)
+[Live Link !](https://vercel.com/nileshsingh234/inueron-assignment-12/3Agr5ZSS1CEj42XxPD3eNbQiXTaZ)
