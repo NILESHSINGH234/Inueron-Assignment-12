@@ -22,4 +22,4 @@ In this project i have created a Product landing page from scratch. And i have l
 
 ### You can Check it Live on Below Link :
 
-[Live Link !](https://inueron-assignment-12-git-main-nileshsingh234.vercel.app/)
+[Live Link !](https://inueron-assignment-12-qd1s-git-main-nileshsingh234.vercel.app/)
